@@ -5,7 +5,7 @@
   "devDependencies": {
     "react-native-scripts": "1.14.0",
     "jest-expo": "~27.0.0",
-    "react-test-renderer": "16.3.1"
+    "react-test-renderer": "16.3.2"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -20,7 +20,17 @@
   },
   "dependencies": {
     "expo": "^27.0.1",
-    "react": "16.3.1",
-    "react-native": "~0.55.2"
+    "minimatch": "^3.0.4",
+    "minipass": "^2.2.4",
+    "native-base": "^2.4.5",
+    "npm-install-missing": "^0.1.4",
+    "once": "^1.4.0",
+    "react": "^16.3.1",
+    "react-native": "~0.55.2",
+    "react-native-elements": "^0.19.1",
+    "react-navigation": "^2.0.1",
+    "safe-buffer": "^5.1.1",
+    "strip-ansi": "^3.0.1",
+    "yallist": "^3.0.2"
   }
 }
