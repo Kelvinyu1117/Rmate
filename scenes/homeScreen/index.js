@@ -2,7 +2,7 @@ import {createDrawerNavigator} from 'react-navigation';
 import HomeScreen from './homeScreen';
 import ProfileScreen from '../profileScreen/profileScreen';
 import PeopleScreen from '../peopleScreen/peopleScreen';
-import SpaceeScreen from '../spaceScreen/spaceScreen';
+import SpaceScreen from '../spaceScreen/spaceScreen';
 import ConnectScreen from '../connectScreen/connectScreen';
 
 const homeScreenNavigator = createDrawerNavigator(
@@ -11,7 +11,7 @@ const homeScreenNavigator = createDrawerNavigator(
             screen: HomeScreen
         },
         Space:{
-            screen: SpaceeScreen
+            screen: SpaceScreen
         },
         People: {
             screen: PeopleScreen
@@ -28,5 +28,7 @@ const homeScreenNavigator = createDrawerNavigator(
         drawerPostion: 'left'
     }
 )
+
+
 
 export default homeScreenNavigator;

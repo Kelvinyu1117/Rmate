@@ -2,7 +2,7 @@ import React from 'react';
 import { Font } from 'expo';
 import { Container, Header, Left, Body, Right, Button, Icon, Title, Content, Spinner, Tab, Tabs, Drawer } from 'native-base';
 
-export default class MenuHeader extends React.Component {
+export default class backwardHeader extends React.Component {
 
     state = {
       fontLoaded: false,
@@ -20,21 +20,18 @@ export default class MenuHeader extends React.Component {
       return (
           this.state.fontLoaded?
           (
-            <Header hasTabs={this.props.isHasTab}>
+            <Header>
               <Left>
               <Button transparent
-                  onPress={this.props.drawer}
+                  onPress={this.props.onPress}
               >
-                <Icon name='menu' />
+                <Icon name='arrow-back' />
               </Button>
               </Left>
               <Body>
                 <Title>{this.props.title}</Title>
               </Body>
               <Right>
-                <Button transparent>
-                  <Icon name='search' />
-                </Button>
                 {this.props.rightButton}
               </Right>
             </Header>

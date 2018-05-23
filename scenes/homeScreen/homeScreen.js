@@ -32,14 +32,14 @@ export default class HomeScreen extends React.Component {
           <MenuHeader 
             isHasTab={true}
             title="Events"
-            drawer={() => this.props.navigation.openDrawer()}
+            onPress={() => this.props.navigation.openDrawer()}
             rightButton={
               <Button transparent>
                 <Icon name='add' />
               </Button>
             }
           />
-          <Tabs initialPage={1}>
+          <Tabs initialPage={0}>
             <Tab heading="Joined">
               <JoinedEvents />
             </Tab>
