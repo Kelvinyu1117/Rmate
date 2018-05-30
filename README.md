@@ -3,11 +3,11 @@ The world is such a beautiful place: There is so much to learn from one another 
 
 ## Team Members
 
-SUNG Hiu Tung, Theresa  (CityU - IS)
-KWONG Yin Kwan, Kennis  (CityU - IS)
-LAU Fung Ping, Yumi     (CityU - IS)
-HAI Ting Wai, Will      (CityU - MTE)
-WU Kwun Yu, Kelvin      (CityU - EE)
++ SUNG Hiu Tung, Theresa  (CityU - IS) <br /><br />
++ KWONG Yin Kwan, Kennis  (CityU - IS) <br /><br />
++ LAU Fung Ping, Yumi     (CityU - IS) <br /><br />
++ HAI Ting Wai, Will      (CityU - MTE) <br /><br />
++ WU Kwun Yu, Kelvin      (CityU - EE)
 
 ## How to Run Our App
 1. Download Expo App in Your Phone
