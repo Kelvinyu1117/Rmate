@@ -1,7 +1,7 @@
 import React from 'react';
 import { Font } from 'expo';
 import { Container, Content, Spinner, Card, CardItem, Body, Text, List, ListItem } from 'native-base'
-import UpcomingEventCard from '../cards/upcomingEventCard'
+import UpcomingEventCard from '../../components/cards/upcomingEventCard'
 
 
 export default class UpcomingEvent extends React.Component {

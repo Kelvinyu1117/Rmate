@@ -1,19 +1,18 @@
 import React from 'react';
 import { Font } from 'expo';
-import { Container, Header, Left, Body, Right, Button, Icon, Title, Content, Spinner, Tab, Tabs, Drawer } from 'native-base'
+import { Container, Header, Left, Body, Right, Button, Icon, Title, Content, Spinner, Tab, Tabs, Drawer } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 import SideBar from '../../components/sideBar/sideBar';
 import MenuHeader from '../../components/header/menuHeader';
-import JoinedEvents from '../../components/tabs/joinedEvents';
-import UpcomingEvents from '../../components/tabs/upcomingEvents';
+import JoinedEvents from '../joinedEventScreen/joinedEvents';
+import UpcomingEvents from '../upcomingEventsScreen/upcomingEvents';
+
+
 
 export default class HomeScreen extends React.Component {
 
   state = {
     fontLoaded: false,
-  }
-
-  static navigationOptions = {
-    drawerLabel: 'Home'
   }
 
   async componentDidMount() {
@@ -23,32 +22,44 @@ export default class HomeScreen extends React.Component {
 
     this.setState({ fontLoaded: true });
   }
-  
+
+  openDrawer() {
+    this._drawer._root.open();
+  }
+  closeDrawer() {
+    this._drawer._root.close();
+  }
+
   render() {
     return (
-      this.state.fontLoaded?
-      (
-        <Container>
-          <MenuHeader 
-            isHasTab={true}
-            title="Events"
-            onPress={() => this.props.navigation.openDrawer()}
-            rightButton={
-              <Button transparent>
-                <Icon name='add' />
-              </Button>
-            }
-          />
-          <Tabs initialPage={0}>
-            <Tab heading="Joined">
-              <JoinedEvents />
-            </Tab>
-            <Tab heading="Upcoming">
-              <UpcomingEvents />
-            </Tab>
-          </Tabs>
-        </Container>
-      ):
+      this.state.fontLoaded ?
+        (
+          <Container>
+            <Drawer
+              ref={(ref) => { this._drawer = ref; }}
+              content={<SideBar navigator={this.navigator} />}
+              onClose={() => this.closeDrawer()} >
+              <MenuHeader
+                isHasTab={true}
+                title="Events"
+                onPress={() => this.openDrawer()}
+                rightButton={
+                  <Button transparent>
+                    <Icon name='add' />
+                  </Button>
+                }
+              />
+              <Tabs initialPage={0}>
+                <Tab heading="Joined">
+                  <JoinedEvents />
+                </Tab>
+                <Tab heading="Upcoming">
+                  <UpcomingEvents />
+                </Tab>
+              </Tabs>
+            </Drawer>
+          </Container>
+        ) :
         (
           <Container>
             <Content>

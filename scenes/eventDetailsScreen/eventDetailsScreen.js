@@ -1,5 +1,6 @@
 import React from 'react';
 import { Font } from 'expo';
+import {Actions} from 'react-native-router-flux';
 import { Container, Header, Left, Body, Right, Button, Icon, Title, Content, Spinner, text} from 'native-base'
 import { StyleSheet, Text, View, } from 'react-native';
 import BackwardHeader from '../../components/header/backwardHeader'
@@ -9,10 +10,6 @@ export default class EventDetailsScreen extends React.Component {
 
     state = {
       fontLoaded: false,
-    }
-    
-    static navigationOptions = {
-      drawerLabel: 'EventDetails'
     }
 
     async componentDidMount() {
@@ -30,7 +27,7 @@ export default class EventDetailsScreen extends React.Component {
             <Container>
                 <BackwardHeader
                 title="Event Details"
-                onPress={() => this.props.navigation.goBack()}
+                onPress={() => Actions.pop()}
                 />
               <Text> I am Event Details </Text>
             </Container>

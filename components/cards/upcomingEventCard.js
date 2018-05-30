@@ -2,7 +2,7 @@ import React from 'react';
 import { Font } from 'expo';
 import { Image } from 'react-native';
 import { Container, Content, Spinner, Card, CardItem, Body, Text, List, ListItem, Left, Button, Icon, Right } from 'native-base'
-
+import { Actions } from 'react-native-router-flux';
 
 export default class JoinedEvents extends React.Component {
 
@@ -40,9 +40,7 @@ export default class JoinedEvents extends React.Component {
                         </CardItem>
                         <CardItem>
                             <Left>
-                                <Button transparent
-                                    onPress={()=>{this.props.navigation.navigate("EventDetails")}} 
-                                >
+                                <Button transparent onPress={()=>Actions.eventDetails()}>
                                     <Text>Learn More</Text>
                                 </Button>
                             </Left>

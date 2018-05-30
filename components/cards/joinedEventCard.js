@@ -22,10 +22,10 @@ export default class JoinedEvents extends React.Component {
         return (
             this.state.fontLoaded ?
                 (
-                    <Card>
+                    /*<Card>
                         <CardItem>
                             <Body>
-                                <Text style={{ fontStyle: 'bold' }}>Big datathon</Text>
+                                <Text>Big datathon</Text>
                                 <Text note> May 26, 2018 </Text>
                             </Body>
                         </CardItem>
@@ -43,6 +43,12 @@ export default class JoinedEvents extends React.Component {
                             </Right>
                         </CardItem>
                     </Card>
+                    */
+                    <Container>
+                        <Content>
+                            <Text> You haven't join any event yet.</Text>
+                        </Content>
+                    </Container>
                 ) : (
                     <Container>
                         <Content>

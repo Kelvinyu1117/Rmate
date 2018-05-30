@@ -21,15 +21,16 @@
   "dependencies": {
     "expo": "^27.0.1",
     "minimatch": "^3.0.4",
-    "minipass": "^2.2.4",
+    "minipass": "^2.3.3",
     "native-base": "^2.4.5",
     "npm-install-missing": "^0.1.4",
     "once": "^1.4.0",
-    "react": "^16.3.1",
+    "react": "^16.4.0",
     "react-native": "~0.55.2",
     "react-native-elements": "^0.19.1",
-    "react-navigation": "^2.0.1",
-    "safe-buffer": "^5.1.1",
+    "react-native-router-flux": "^4.0.0-beta.31",
+    "react-navigation": "^2.0.4",
+    "safe-buffer": "^5.1.2",
     "strip-ansi": "^3.0.1",
     "yallist": "^3.0.2"
   }

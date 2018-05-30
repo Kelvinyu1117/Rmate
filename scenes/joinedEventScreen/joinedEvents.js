@@ -1,7 +1,7 @@
 import React from 'react';
 import { Font } from 'expo';
 import { Container, Content, Spinner, Card, CardItem, Body, Text, List, ListItem } from 'native-base'
-import JoinedEventCard from '../cards/joinedEventCard'
+import JoinedEventCard from '../../components/cards/joinedEventCard'
 
 export default class JoinedEvents extends React.Component {
 
