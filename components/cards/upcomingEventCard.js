@@ -2,6 +2,7 @@ import React from 'react';
 import { Font } from 'expo';
 import { Image } from 'react-native';
 import { Container, Content, Spinner, Card, CardItem, Body, Text, List, ListItem, Left, Button, Icon, Right } from 'native-base'
+import NewCardItem from '../cardItem/newCardItem'
 import { Actions } from 'react-native-router-flux';
 
 export default class JoinedEvents extends React.Component {
@@ -28,27 +29,23 @@ export default class JoinedEvents extends React.Component {
         return (
             this.state.fontLoaded ?
                 (
-                    <Card>
-                        <CardItem>
-                            <Body>
-                                <Text>Big datathon</Text>
-                                <Text note> May 26, 2018 </Text>
-                            </Body>
-                        </CardItem>
-                        <CardItem cardBody>
-                            <Image source={{ uri: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F44479692%2F214068951195%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C0%2C3416%2C1708&s=6ceb952e965dbd708fba2c5af4c0336c' }} style={{ height: 120, width: null, flex: 1 }} />
-                        </CardItem>
-                        <CardItem>
-                            <Left>
-                                <Button transparent onPress={()=>Actions.eventDetails()}>
-                                    <Text>Learn More</Text>
-                                </Button>
-                            </Left>
-                            <Right>
-                                <Text>3 days left</Text>
-                            </Right>
-                        </CardItem>
-                    </Card>
+                    <Content>
+                        <NewCardItem
+                            title="Affordable Art Fair 2018"
+                            img="https://bit.ly/2L7ZqfA"
+                            eventDate="May 18-20, 2018"
+                        />
+                        <NewCardItem
+                            title="Cyberport University Partnership Programme (CUPP) 2018"
+                            img="http://fintechnews.hk/wp-content/uploads/2018/03/Cyberport-Appoints-Peter-Yan-as-the-Chief-Executive-Officer-817x404_c.jpg"
+                            eventDate="June 4, 2018"
+                        />
+                        <NewCardItem
+                            title="Hong Kong Beauty & Fitness Expo 2018"
+                            img="https://bit.ly/2sqrB1t"
+                            eventDate="May 18-20, 2018"
+                        />
+                    </Content>
                 ) : (
                     <Container>
                         <Content>

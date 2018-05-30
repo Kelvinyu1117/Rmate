@@ -1,6 +1,6 @@
 import React from 'react';
 import { Font } from 'expo';
-import { Container, Header, Left, Body, Right, Button, Icon, Title, Content, Spinner, Tab, Tabs, Drawer } from 'native-base';
+import { Container, Button, Icon, Title, Content, Spinner, Tab, Tabs, Drawer } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import SideBar from '../../components/sideBar/sideBar';
 import MenuHeader from '../../components/header/menuHeader';
@@ -15,6 +15,7 @@ export default class HomeScreen extends React.Component {
     fontLoaded: false,
   }
 
+  // load the font after the component is mounted
   async componentDidMount() {
     await Font.loadAsync({
       'Roboto_medium': require('../../assets/fonts/Roboto_medium.ttf'),
@@ -23,9 +24,12 @@ export default class HomeScreen extends React.Component {
     this.setState({ fontLoaded: true });
   }
 
+  // open the drawer
   openDrawer() {
     this._drawer._root.open();
   }
+
+  // close the drawer
   closeDrawer() {
     this._drawer._root.close();
   }

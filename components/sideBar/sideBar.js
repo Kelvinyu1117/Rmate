@@ -29,10 +29,14 @@ export default class SideBar extends React.Component {
         (
           <Container>
             <Content style={{ backgroundColor: '#ffffff' }}>
-              <View style={{ marginLeft: 20, marginTop: 20 }}>
+              <View style={{ marginLeft: 15, marginTop: 20, flexDirection: 'row' }}>
                 <Avatar rounded
                   large
+                  source={{ uri: "https://avatars3.githubusercontent.com/u/26522479?s=400&v=4" }}
                 />
+                <View style={{ marginLeft: 15, justifyContent: 'center', alignItems: 'center', }}>
+                  <Text> Kelvin Wu </Text>
+                </View>
               </View>
               <List>
                 <ListItem
@@ -42,22 +46,22 @@ export default class SideBar extends React.Component {
                 </ListItem>
                 <ListItem
                   button
-                  onPress={() => { Actions.profile()}}>
+                  onPress={() => { Actions.profile() }}>
                   <Text>{routes[1]}</Text>
                 </ListItem>
                 <ListItem
                   button
-                  onPress={() => { Actions.people()}}>
+                  onPress={() => { Actions.people() }}>
                   <Text>{routes[2]}</Text>
                 </ListItem>
                 <ListItem
                   button
-                  onPress={() => { Actions.connect()}}>
+                  onPress={() => { Actions.connect() }}>
                   <Text>{routes[3]}</Text>
                 </ListItem>
                 <ListItem
                   button
-                  onPress={() => { Actions.space()}}>
+                  onPress={() => { Actions.space() }}>
                   <Text>{routes[4]}</Text>
                 </ListItem>
                 <ListItem
@@ -74,7 +78,6 @@ export default class SideBar extends React.Component {
             </Content>
           </Container>
         )
-
     );
   }
 }
